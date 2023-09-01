@@ -322,14 +322,14 @@ yoga = Event.new(
 yoga.save!
 yoga.photo.attach(io: File.open(yoga_image), filename: 'yoga.jpg', content_type: 'image/jpg')
 puts 'Created Yoga Event'
-  
+
 Attendant.create!( user: giulia, event: yoga, status: "attending")
 
 book = Event.new(
   title: "Free children's books!",
   content: ' The event to help immigrant and non-Japanese speaking families get access to books and educational activities while having fun in their neighborhoods.',
   date: Date.today + (rand(1..10)),
-  location: '123 Park St.',
+  location: '3-5-1 Ueno Station Takanashi Building',
   time: generate_random_time,
   user: jonny
 )
@@ -337,7 +337,7 @@ book = Event.new(
 book.save!
 book.photo.attach(io: File.open(book_image), filename: 'book.jpg', content_type: 'image/jpg')
 puts 'Created Book event'
-  
+
 Attendant.create!( user: jonny, event: book, status: "attending")
 
 diapers = Event.new(
@@ -359,7 +359,7 @@ ice_cream = Event.new(
   title: 'Free ice cream!',
   content: 'Celebrate the end of summer with an old-fashioned ice cream social in the beautiful Yoyogi Park of Tokyo.  Enjoy ice cream treats, popcorn, a face painter, a balloon twister, games for the kids, and activities provided by FLOTO!',
   date: generate_random_time,
-  location: 'Yoyogi Park',
+  location: 'Hanegi Park',
   time: generate_random_time,
   user: jonny
 )
@@ -386,8 +386,8 @@ Attendant.create!( user: tenny, event: support, status: "attending")
 nutrition = Event.new(
   title: 'Nutrition classes',
   content: 'Make healthy and nutritious meals for you and your family',
-  date: Date.new(2023, 9, 7),
-  location: '1010 Carrot St.',
+  date: Date.new(2023, 9, 1),
+  location: '1-35-24 Meguro Sunshine Building',
   time: generate_random_time,
   user: lola
 )
